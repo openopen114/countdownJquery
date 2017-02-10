@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery立体式数字动态翻页效果</title>
+<!-- REF : http://demo.lanrenzhijia.com/2016/statistics0627/ -->
+<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+</head>
+<body>
+<style>
+body{ padding-top:100px;}
+.baidu_ads{ width:960px; height:90px; position:absolute; left:50%; top:0; margin-left:-480px; overflow:hidden;}
+.sougou_ads{ width:728px; height:90px; position:fixed; left:50%; bottom:0; margin-left:-364px; overflow:hidden;z-index:9999;}
+</style>
+
+
+<div class="baidu_ads">
+<script type="text/javascript">
+var sogou_ad_id=395091;
+var sogou_ad_height=90;
+var sogou_ad_width=960;
+</script>
+<script type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+
+</div>
+
+<div class="sougou_ads">
+<script type="text/javascript">
+var sogou_ad_id=395092;
+var sogou_ad_height=90;
+var sogou_ad_width=728;
+</script>
+<script type='text/javascript' src='http://images.sohu.com/cs/jsfile/js/c.js'></script>
+</div>
+
+
+<span style="display:none;">
+<script src="http://s94.cnzz.com/stat.php?id=4106941&web_id=4106941" language="JavaScript"></script>
+</script>
+</span><!-- 代码部分begin -->
+<div class="tj_top"></div>
+<div class="tj_tit"></div>
+<div class="dataStatistics">
+	<div class="digit_set"></div>
+	<div class="digit_set"></div>
+	<div class="digit_set"></div>
+	<div class="digit_set"></div>
+	<div class="digit_set"></div>
+	<div class="digit_set set_last"></div>
+</div>
+<div class="tj_foot"></div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.dataStatistics.js"></script>
+<script>
+$(document).ready(function(){
+	$('.dataStatistics').dataStatistics({min:0,max:10,time:30000,len:6});
+});
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>
