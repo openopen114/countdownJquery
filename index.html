@@ -3,9 +3,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>jQuery立体式数字动态翻页效果</title>
+<title> </title>
 <!-- REF : http://demo.lanrenzhijia.com/2016/statistics0627/ -->
 <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 </head>
 <body>
 <style>
@@ -35,27 +36,56 @@ var sogou_ad_width=728;
 </div>
 
 
-<span style="display:none;">
+<!-- <span style="display:none;">
 <script src="http://s94.cnzz.com/stat.php?id=4106941&web_id=4106941" language="JavaScript"></script>
 </script>
-</span><!-- 代码部分begin -->
-<div class="tj_top"></div>
-<div class="tj_tit"></div>
-<div class="dataStatistics">
-	<!-- <div class="digit_set"></div>
-	<div class="digit_set"></div>
-	<div class="digit_set"></div>
-	<div class="digit_set"></div> -->
-	<div class="digit_set"></div>
-	<div class="digit_set set_last"></div>
+</span> -->
+<!-- 代码部分begin -->
+<!-- <div class="tj_top"></div> -->
+<!-- <div class="tj_tit"></div> -->
+
+<div class="contentBox">
+
+	<div class="dataStatistics" id="t1"> 
+		<div class="digit_set"></div>
+		<div class="digit_set set_last"></div>
+		<h1 class="percent">%</h1>
+	</div>
+
+	<div class="Tilde">
+		<h1>~</h1>
+	</div>
+
+
+	<div class="dataStatistics" id="t2"> 
+		<div class="digit_set"></div>
+		<div class="digit_set set_last"></div>
+		<h1 class="percent">%</h1>
+	</div>
+
+
 </div>
+
+
+
 <div class="tj_foot"></div>
 
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.dataStatistics.js"></script>
 <script>
 $(document).ready(function(){
-	$('.dataStatistics').dataStatistics({min:0,max:10,time:3000,len:2});
+	// $('.dataStatistics').dataStatistics({min:0,max:10,time:3000,len:2});
+	function RunT2() {
+ 		$('#t2').dataStatistics({min:0,max:10,time:3000,len:2});
+	}
+	$('#t1').dataStatistics({min:0,max:8,time:3000,len:2});
+
+	setTimeout(RunT2, 3500);
+
+	// $('#t2').dataStatistics({min:0,max:10,time:3000,len:2});
+
+
+
 });
 </script>
 <!-- 代码部分end -->
